@@ -1,9 +1,8 @@
-package com.example.project_2;
+package com.example.demo;
 
 import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Scene;
-import javafx.scene.layout.VBox;
 import javafx.stage.Stage;
 
 import java.io.IOException;
@@ -11,9 +10,8 @@ import java.io.IOException;
 public class HelloApplication extends Application {
     @Override
     public void start(Stage stage) throws IOException {
-        VBox box = new VBox();
-
-        Scene scene = new Scene(box);
+        FXMLLoader fxmlLoader = new FXMLLoader(HelloApplication.class.getResource("UI.fxml"));
+        Scene scene = new Scene(fxmlLoader.load(), 972, 547);
         stage.setTitle("Hello!");
         stage.setScene(scene);
         stage.show();
